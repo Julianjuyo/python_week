@@ -1,0 +1,49 @@
+Key 9778 80094
+number of frames 5000
+Local Score 50793
+--- 73.91200923919678 seconds ---
+Key 10349 79511
+number of frames 5000
+Local Score 44765
+--- 69.61238694190979 seconds ---
+Key 33342 56826
+number of frames 5000
+Local Score 26314
+--- 60.816015005111694 seconds ---
+Key 24072 66127
+number of frames 5000
+Local Score 23401
+--- 45.36812496185303 seconds ---
+Key 41935
+number of frames 5000
+Local Score 22014
+--- 42.36757016181946 seconds ---
+Key 19900
+number of frames 5000
+Local Score 16222
+--- 37.72425699234009 seconds ---
+Key 7949 81862
+number of frames 5000
+Local Score 14889
+--- 33.33967185020447 seconds ---
+Key 35722
+number of frames 5000
+Local Score 11414
+--- 33.191519021987915 seconds ---
+Key 34994 55206
+number of frames 5000
+Local Score 9480
+--- 31.824679136276245 seconds ---
+Key 89327
+number of frames 5000
+Local Score 6135
+--- 28.239337921142578 seconds ---
+Key 88141
+number of frames 5000
+Local Score 3036
+--- 26.17104411125183 seconds ---
+Key 33285
+number of frames 5000
+Local Score 1619
+--- 22.816588878631592 seconds ---
+The global Score is 230082
