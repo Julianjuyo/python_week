@@ -1,0 +1,42 @@
+Key 9
+Total Score 612
+--- 18.309459924697876 seconds ---
+Key 12
+Total Score 5817
+--- 202.26480197906494 seconds ---
+Key 15
+Total Score 16722
+--- 511.32928109169006 seconds ---
+Key 18
+Total Score 23484
+--- 559.9099991321564 seconds ---
+Key 21
+Total Score 18405
+--- 437.78343892097473 seconds ---
+Key 24
+Total Score 9324
+--- 160.2574269771576 seconds ---
+Key 27
+Total Score 3381
+--- 41.73214626312256 seconds ---
+Key 30
+Total Score 828
+--- 8.055361986160278 seconds ---
+Key 33
+Total Score 183
+--- 1.140592098236084 seconds ---
+Key 36
+Total Score 27
+--- 0.10010313987731934 seconds ---
+Key 39
+Total Score 3
+--- 0.013186931610107422 seconds ---
+Key 42
+Total Score 0
+--- 0.0006656646728515625 seconds ---
+Key 45
+Total Score 0
+--- 0.0001373291015625 seconds ---
+Key 51
+Total Score 0
+--- 2.574920654296875e-05 seconds ---
