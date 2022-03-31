@@ -1,13 +1,13 @@
 import time
 import pandas as pd
 
-#FILE_PATH= 'data/10_computable_moments.txt'
+FILE_PATH= 'data/10_computable_moments.txt'
 #FILE_PATH= 'data/1_binary_landscapes.txt'
 # FILE_PATH= 'data/110_oily_portraits.txt'
 # FILE_PATH= 'data/110_oily_portraits.txt'
-FILE_PATH= 'data/0_example.txt'
+#FILE_PATH= 'data/0_example.txt'
 WRITE_PATH = 'output_data/answer10.txt'
-NUMBER_OF_FRAMES_PER_GROUP = 50
+NUMBER_OF_FRAMES_PER_GROUP = 1000
 
 
 def readFile(filePath):
@@ -184,6 +184,6 @@ if __name__ == '__main__':
 
     dataset_raw = pd.read_csv(WRITE_PATH)
     print(dataset_raw.head(5))
-    print(len(dataset_raw))
-    print(dataset_raw.duplicated().sum())
+    print("lenght",len(dataset_raw))
+    print("Duplicates",dataset_raw.duplicated().sum())
 
