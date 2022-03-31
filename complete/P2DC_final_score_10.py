@@ -1,5 +1,6 @@
 import os
-import main as file
+import time
+import P2DC_Team_10 as file
 
 '''
 -------------------------------------
@@ -24,29 +25,32 @@ def readFile(filePath):
     del listl[0]
     return listl
 
-def findGlobalScore(filepath,sortingFile):
-
-def runScript(af,ad,aaa):
 
 
-    return af
+def startRun():
 
-if __name__ == '__main__':
-
-    # os.system("main.py")
-
+    start_time = time.time()
+    print("Start running")
     GlobalRoboticSatisfaction=0
-
-    writePathStart ="output/"
+    writePathStart ="output"
     directory = 'data/'
 
     dictWithSubgroups = {
-        "1_binary_landscapes.txt": 9000,
-        "11_randomizing_paintings.txt": 11000,
-        "110_oily_portraits.txt": "1964",
-        "0_example.txt": 10,
-        "10_computable_moments.txt": 2000
+        "data/1_binary_landscapes.txt": 9000,
+        "data/11_randomizing_paintings.txt": 12000,
+        "data/110_oily_portraits.txt": 10000,
+        "data/0_example.txt": 10,
+        "data/10_computable_moments.txt": 2000
     }
+
+    dictWithSubgroups2 = {
+        "data/1_binary_landscapes.txt": 20,
+        "data/11_randomizing_paintings.txt": 20,
+        "data/110_oily_portraits.txt": 20,
+        "data/0_example.txt": 20,
+        "data/10_computable_moments.txt": 20
+    }
+
 
     # iterate over files in
     # that directory
@@ -55,13 +59,13 @@ if __name__ == '__main__':
 
             compare = filename.path
 
-            print(filename.path)
-
             if compare in dictWithSubgroups:
-
+                print("Start with file: ",filename.path)
                 GlobalRoboticSatisfaction = GlobalRoboticSatisfaction + file.runScript(filename.path,writePathStart+filename.path,dictWithSubgroups[compare])
 
+    print("--------------------------------------")
+    print("GLOBAL ROBOT SATISFACTION IS: ",GlobalRoboticSatisfaction)
+    print("--- %s minutes ---" % ((time.time() - start_time)/60))
+    print("--------------------------------------")
 
-    print("--------------------------------------")
-    print("GLOBAL ROBOT SATISFACTION IS:" +GlobalRoboticSatisfaction)
-    print("--------------------------------------")
+startRun()

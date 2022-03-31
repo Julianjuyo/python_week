@@ -1,7 +1,5 @@
-6
+4
 L 3 animals fear war
 P 2 smile woman
 P 2 woman pearl
 L 3 fear raft survivors
-P 3 hola woman war
-P 1 war

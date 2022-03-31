@@ -1,0 +1,311 @@
+
+10_computable_moments ->1000 > 1455
+
+number of frames 750
+Local Score 1455
+The global Score is 1455
+total input 1000
+number of frames 750
+number of frames per group 1000
+--- 0.5674161911010742 seconds ---
+
+1_binary_landscapes -> 10 minutes -> 9000-> 63168 ->  615
+number of frames 5000
+Local Score 894
+The global Score is 38400
+80000
+80000
+--- 581.9927411079407 seconds ---
+
+number of frames 3000
+Local Score 354
+The global Score is 51255
+80000
+80000
+--- 835.037859916687 seconds ---
+
+number of frames 10000
+Local Score 3807
+The global Score is 68898
+80000
+80000
+--- 1031.140404701233 seconds ---
+
+output_data/output1_binary_landscapes22.txt
+The global Score is 111990
+total input 80000
+number of frames 80000
+number of frames per group 20000
+--- 1971.317330121994 seconds ---
+lenght_answer 80000
+Duplicates_answer 0
+
+
+11_randomizing_paintings -> 4MB -> 10 minutes -9000
+
+number of frames 1000
+Local Score 984
+The global Score is 397758
+total input 90000
+number of frames 60000
+number of frames per group 1000
+--- 84.8905439376831 seconds ---
+
+number of frames 3000
+Local Score 4021
+The global Score is 407000
+total input 90000
+number of frames 60000
+number of frames per group 3000
+--- 233.72110414505005 seconds ---
+
+number of frames 5000
+Local Score 8006
+The global Score is 409443
+total input 90000
+number of frames 60000
+number of frames per group 5000
+--- 389.71679520606995 seconds ---
+
+number of frames 10000
+Local Score 22265
+The global Score is 411591
+total input 90000
+number of frames 60000
+number of frames per group 10000
+--- 792.0481059551239 seconds ---
+
+output_data/output1_11_randomizing_paintings22.txt
+The global Score is 412787
+total input 90000
+number of frames 60000
+number of frames per group 20000
+--- 992.7331666946411 seconds ---
+lenght_answer 60000
+Duplicates_answer 0
+
+
+
+110_oily_portraits -> 9MB 10 minutes -> 5000
+
+number of frames 2000
+Local Score 17210
+The global Score is 349284
+total input 80000
+number of frames 40000
+number of frames per group 2000
+--- 265.90823197364807 seconds ---
+
+number of frames 1000
+Local Score 8157
+The global Score is 358680
+total input 80000
+number of frames 40000
+number of frames per group 3000
+--- 388.89164423942566 seconds ---
+
+number of frames 8000
+Local Score 75812
+The global Score is 382633
+total input 80000
+number of frames 40000
+number of frames per group 8000
+--- 982.8791592121124 seconds ---
+
+
+output_data/output1_110_oily_portraits22.txt
+The global Score is 402662
+total input 80000
+number of frames 40000
+number of frames per group 20000
+--- 1217.930822134018 seconds ---
+lenght_answer 40000
+Duplicates_answer 0
+
+
+928.894
+69
+
+
+
+
+NUMBER OF FRAMES:  33
+
+---------------
+output_data/output1_binary_landscapesF.txt
+The global Score is 44748
+total input 80000
+number of frames 80000
+number of frames per group 6000
+--- 391.26993894577026 seconds ---
+lenght_answer 80000
+Duplicates_answer 0
+   
+---------------
+output_data/output1_11_randomizing_paintings22.F
+The global Score is 411196
+total input 90000
+number of frames 60000
+number of frames per group 9000
+--- 445.7361238002777 seconds ---
+lenght_answer 60000
+Duplicates_answer 0
+   
+---------------
+output_data/output1_110_oily_portraitsF.txt
+The global Score is 371533
+total input 80000
+number of frames 40000
+number of frames per group 5000
+--- 308.925448179245 seconds ---
+lenght_answer 40000
+Duplicates_answer 0
+   
+
+NUMBER OF FRAMES:  44
+
+---------------
+output_data/output1_binary_landscapesFF.txt
+The global Score is 48009
+total input 80000
+number of frames 80000
+number of frames per group 6500
+--- 428.4530260562897 seconds ---
+lenght_answer 80000
+Duplicates_answer 0
+   
+---------------
+output_data/output1_11_randomizing_paintingsFF.txt
+The global Score is 411633
+total input 90000
+number of frames 60000
+number of frames per group 9500
+--- 476.7752571105957 seconds ---
+lenght_answer 60000
+Duplicates_answer 0
+   
+---------------
+output_data/output1_110_oily_portraitsFF.txt
+The global Score is 372455
+total input 80000
+number of frames 40000
+number of frames per group 5500
+--- 334.15924310684204 seconds ---
+lenght_answer 40000
+Duplicates_answer 0
+
+
+
+---------------
+output_data/output1_binary_landscapes55.txt
+The global Score is 57552
+total input 80000
+number of frames 80000
+number of frames per group 8000
+--- 543.5973701477051 seconds ---
+lenght_answer 80000
+Duplicates_answer 0
+   
+---------------
+output_data/output1_11_randomizing_paintings55.txt
+The global Score is 411591
+total input 90000
+number of frames 60000
+number of frames per group 10000
+--- 496.73509907722473 seconds ---
+lenght_answer 60000
+Duplicates_answer 0
+   
+---------------
+output_data/output1_110_oily_portraits55.txt
+The global Score is 378549
+total input 80000
+number of frames 40000
+number of frames per group 7000
+--- 417.81953597068787 seconds ---
+lenght_answer 40000
+Duplicates_answer 0
+   
+NUMBER OF FRAMES:  66
+
+ ---------------
+output_data/output1_binary_landscapes66.txt
+The global Score is 63168
+total input 80000
+number of frames 80000
+number of frames per group 9000
+--- 615.0142350196838 seconds ---
+lenght_answer 80000
+Duplicates_answer 0
+   
+---------------
+output_data/output1_11_randomizing_paintings66.txt
+The global Score is 411949
+total input 90000
+number of frames 60000
+number of frames per group 10500
+--- 523.9673459529877 seconds ---
+lenght_answer 60000
+Duplicates_answer 0
+   
+---------------
+output_data/output1_110_oily_portraits66.txt
+The global Score is 379350
+total input 80000
+number of frames 40000
+number of frames per group 7500
+--- 447.5971188545227 seconds ---
+lenght_answer 40000
+Duplicates_answer 0
+   
+
+Process finished with exit code 0
+
+
+
+NUMBER OF FRAMES:  77
+
+---------------
+output_data/output1_110_oily_portraits77.txt
+The global Score is 382633
+total input 80000
+number of frames 40000
+number of frames per group 8000
+--- 494.379353761673 seconds ---
+lenght_answer 40000
+Duplicates_answer 0
+   
+---------------
+output_data/output1_11_randomizing_paintings77.txt
+The global Score is 411905
+total input 90000
+number of frames 60000
+number of frames per group 11000
+--- 529.2396428585052 seconds ---
+lenght_answer 60000
+Duplicates_answer 0
+   
+NUMBER OF FRAMES:  88
+
+---------------
+output_data/output1_110_oily_portraits88.txt
+The global Score is 383231
+total input 80000
+number of frames 40000
+number of frames per group 9000
+--- 523.3448088169098 seconds ---
+lenght_answer 40000
+Duplicates_answer 0
+   
+---------------
+output_data/output1_11_randomizing_paintings88.txt
+The global Score is 412017
+total input 90000
+number of frames 60000
+number of frames per group 12000
+--- 595.4309780597687 seconds ---
+lenght_answer 60000
+Duplicates_answer 0
+   
+
+Process finished with exit code 0
