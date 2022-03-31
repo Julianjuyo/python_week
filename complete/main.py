@@ -1,14 +1,18 @@
 import time
 import pandas as pd
+from typing import List
 
-FILE_PATH= 'data/10_computable_moments.txt'
-#FILE_PATH= 'data/1_binary_landscapes.txt'
-# FILE_PATH= 'data/110_oily_portraits.txt'
-# FILE_PATH= 'data/110_oily_portraits.txt'
-#FILE_PATH= 'data/0_example.txt'
-WRITE_PATH = 'output_data/answer10.txt'
-NUMBER_OF_FRAMES_PER_GROUP = 1000
+'''
+-------------------------------------
+Team name: Driven By Data
+Team Id: 10
 
+Yash Kumar Jain
+Mohamad Serhan
+Julian esteban Oliveros forero
+Qinghua Ye
+-------------------------------------
+'''
 
 def readFile(filePath):
     landscapes = {}
@@ -52,25 +56,20 @@ def mergePortraits(pPaintingsPortraits):
         final =  merge-common
         df = final.union(common)
 
-
-        mergePortrait[newId] = {'paintId': newId, 'type': first["type"],
-                            'NumofTags': int(first["NumofTags"]) + int(last["NumofTags"]),
-                            'tags': sorted(df)}
-
-        #TODO no esta haciendo el merge de los tags eliminando los tags en comun
+        mergePortrait[newId] = {'paintId': newId, 'type': first["type"],'NumofTags': int(first["NumofTags"]) + int(last["NumofTags"]),'tags': sorted(df)}
 
         key.remove(key[0])
         key.remove(key[-1])
     return mergePortrait
 
 
-def subGrouping(actualDictionary):
+def subGrouping(actualDictionary,pNUMBER_OF_FRAMES_PER_GROUP):
 
     mydict = {}
     countGroups = 0
     curentkey = ""
     for i in actualDictionary.values():
-        if countGroups == NUMBER_OF_FRAMES_PER_GROUP:
+        if countGroups == pNUMBER_OF_FRAMES_PER_GROUP:
             countGroups = 0
 
         if countGroups == 0:
@@ -104,12 +103,10 @@ def sortDictionary(arrayOfFrames):
         # loop to compare the actual frame with all of the others remaining
         for j in arrayOfFrames:
 
-
             min = minvalue(set(data[i]["tags"]), set(j["tags"]))
 
             if numMaximunIntersection==0:
                 nextFrame = j
-
 
             # Check which frame its the best to compare with
             if min > numMaximunIntersection:
@@ -120,13 +117,13 @@ def sortDictionary(arrayOfFrames):
         total = total + numMaximunIntersection
         arrayOfFrames.remove(nextFrame)
 
-    print("Local Score", total)
+    #print("Local Score", total)
     return data, total
 
 
 # This method will sort all the dictionary
-def sortFramesArray(frameDict,longitud):
-    f = open(WRITE_PATH, "w+")
+def sortFramesArray(frameDict,longitud,writePath):
+    f = open(writePath, "w+")
     f.write(str(longitud))
     f.write('\n')
     globalScore = 0
@@ -134,8 +131,8 @@ def sortFramesArray(frameDict,longitud):
     # sort all the values of every key in a dictionary.
     for key in frameDict:
 
-        print("Key", key)
-        print("number of frames", len(frameDict[key]))
+        #print("Key", key)
+        #print("number of frames", len(frameDict[key]))
 
         answer = sortDictionary(frameDict[key])
         sortedArray = answer[0]
@@ -147,44 +144,65 @@ def sortFramesArray(frameDict,longitud):
 
         # we could do multitheading here.
 
+    print("---------------")
+    print(writePath)
     print("The global Score is", globalScore)
     f.close
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
+    return globalScore
 
+
+def runScript(filePath,writePath,pNUMBER_OF_FRAMES_PER_GROUP):
     start_time = time.time()
-    #Read the file
-    list = readFile(FILE_PATH)
+    # Read the file
+    list = readFile(filePath)
 
-
-
-    #Check if theres portraits
+    # Check if theres portraits
     # landscapes = list [0]
     # portraits = list [1]
-    framesWithPortraits={}
-    if len(list[1])!=0:
+    framesWithPortraits = {}
+    if len(list[1]) != 0:
         # We will need to order portraits
         framesWithPortraits = mergePortraits(list[1])
-        print(framesWithPortraits)
+        #print(framesWithPortraits)
 
     frames = {**list[0], **framesWithPortraits}
 
-
-    #Now we will divide into subgroups
-    groupingElements = subGrouping(sortPaintings(frames))
+    # Now we will divide into subgroups
+    groupingElements = subGrouping(sortPaintings(frames),pNUMBER_OF_FRAMES_PER_GROUP)
 
     # In this part we are going to compare the output
-    sortFramesArray(groupingElements,len(frames))
+    globalScore = sortFramesArray(groupingElements, len(frames),writePath)
 
-    print("total input",len(list[0])+len(list[1]))
-    print("number of frames",len(frames))
-    print("number of frames per group", NUMBER_OF_FRAMES_PER_GROUP)
+    print("total input", len(list[0]) + len(list[1]))
+    print("number of frames", len(frames))
+    print("number of frames per group", pNUMBER_OF_FRAMES_PER_GROUP)
     print("--- %s seconds ---" % (time.time() - start_time))
 
+    dataset_raw = pd.read_csv(writePath)
+    #print(dataset_raw.head(5))
+    print("lenght_answer", len(dataset_raw))
+    print("Duplicates_answer", dataset_raw.duplicated().sum())
+    print("   ")
 
-    dataset_raw = pd.read_csv(WRITE_PATH)
-    print(dataset_raw.head(5))
-    print("lenght",len(dataset_raw))
-    print("Duplicates",dataset_raw.duplicated().sum())
+    return globalScore
+
+
+# Press the green button in the gutter to run the script.
+
+def main():
+    numframes1 = 77
+    print("NUMBER OF FRAMES: ",numframes1)
+    print("")
+    #runScript("data/1_binary_landscapes.txt","output_data/output1_binary_landscapes55.txt",8000)
+    runScript("data/110_oily_portraits.txt","output_data/output1_110_oily_portraits77.txt",8000)
+    runScript("data/11_randomizing_paintings.txt","output_data/output1_11_randomizing_paintings77.txt",11000)
+
+
+    numframes2= 88
+    print("NUMBER OF FRAMES: ",numframes2)
+    print("")
+    #runScript("data/1_binary_landscapes.txt","output_data/output1_binary_landscapes66.txt",9000)
+    runScript("data/110_oily_portraits.txt", "output_data/output1_110_oily_portraits88.txt", 9000)
+    runScript("data/11_randomizing_paintings.txt","output_data/output1_11_randomizing_paintings88.txt",12000)
 
