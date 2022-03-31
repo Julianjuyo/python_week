@@ -177,8 +177,9 @@ if __name__ == '__main__':
     # In this part we are going to compare the output
     sortFramesArray(groupingElements,len(frames))
 
-    print(len(list[0])+len(list[1]))
-    print(len(frames))
+    print("total input",len(list[0])+len(list[1]))
+    print("number of frames",len(frames))
+    print("number of frames per group", NUMBER_OF_FRAMES_PER_GROUP)
     print("--- %s seconds ---" % (time.time() - start_time))
 
 
