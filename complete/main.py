@@ -1,4 +1,5 @@
 import time
+import pandas as pd
 
 #FILE_PATH= 'data/10_computable_moments.txt'
 FILE_PATH= 'data/1_binary_landscapes.txt'
@@ -162,3 +163,10 @@ if __name__ == '__main__':
     print(len(list[0])+len(list[1]))
     print(len(frames))
     print("--- %s seconds ---" % (time.time() - start_time))
+
+
+    dataset_raw = pd.read_csv(WRITE_PATH)
+    print(dataset_raw.head(5))
+    print(len(dataset_raw))
+    print(dataset_raw.duplicated().sum())
+
