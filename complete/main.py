@@ -2,9 +2,10 @@ import time
 import pandas as pd
 
 #FILE_PATH= 'data/10_computable_moments.txt'
-FILE_PATH= 'data/1_binary_landscapes.txt'
+#FILE_PATH= 'data/1_binary_landscapes.txt'
 # FILE_PATH= 'data/110_oily_portraits.txt'
 # FILE_PATH= 'data/110_oily_portraits.txt'
+FILE_PATH= 'data/0_example.txt'
 WRITE_PATH = 'output_data/answer10.txt'
 NUMBER_OF_FRAMES_PER_GROUP = 50
 
@@ -45,9 +46,18 @@ def mergePortraits(pPaintingsPortraits):
         last = sortPortraits[key[-1]]
         newId = str(first["paintId"]) + " " + str(last["paintId"])
 
+        #tags = set(first["tags"] )
+        common = set(first["tags"]).intersection(set(last["tags"]))
+        merge = set(first["tags"] + last["tags"])
+        final =  merge-common
+        df = final.union(common)
+
+
         mergePortrait[newId] = {'paintId': newId, 'type': first["type"],
                             'NumofTags': int(first["NumofTags"]) + int(last["NumofTags"]),
-                            'tags': first["tags"] + last["tags"]}
+                            'tags': sorted(df)}
+
+        #TODO no esta haciendo el merge de los tags eliminando los tags en comun
 
         key.remove(key[0])
         key.remove(key[-1])
@@ -94,10 +104,15 @@ def sortDictionary(arrayOfFrames):
         # loop to compare the actual frame with all of the others remaining
         for j in arrayOfFrames:
 
-            min = minvalue(set(data[0]["tags"]), set(j["tags"]))
+
+            min = minvalue(set(data[i]["tags"]), set(j["tags"]))
+
+            if numMaximunIntersection==0:
+                nextFrame = j
+
 
             # Check which frame its the best to compare with
-            if min >= numMaximunIntersection:
+            if min > numMaximunIntersection:
                 nextFrame = j
                 numMaximunIntersection = min
 
@@ -141,6 +156,8 @@ if __name__ == '__main__':
     start_time = time.time()
     #Read the file
     list = readFile(FILE_PATH)
+
+
 
     #Check if theres portraits
     # landscapes = list [0]
